@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Around Africa</string>
     <string name="get_started">Start</string>
+    <string name="decline">Not Now</string>
+    <string name="accept">Proceed</string>
+    <string name="dialog_message">Proceed to get location: %s</string>
 
     <string name="tutorial_one">Touring AFRICA and learning about it\'s
         beautiful historical destination just got easier

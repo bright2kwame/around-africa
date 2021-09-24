@@ -8,7 +8,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonCall"
+        app:layout_constraintBottom_toTopOf="@+id/layoutFooter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -61,30 +61,15 @@
 
     </androidx.core.widget.NestedScrollView>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonCall"
-        style="@style/MaterialIconOnlyBaseButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
-        android:textAllCaps="true"
-        app:icon="@drawable/ic_baseline_call"
-        app:iconGravity="textTop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintWidth_percent="0.5" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonSendMessage"
-        style="@style/MaterialIconOnlyButtonStyle"
-        android:layout_width="0dp"
+    <include
+        android:id="@+id/layoutFooter"
+        layout="@layout/layout_footer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAllCaps="true"
-        app:icon="@drawable/ic_baseline_email"
-        app:iconGravity="textTop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.5" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

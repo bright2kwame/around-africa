@@ -8,23 +8,22 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.bright.aroundafrica.R
 import kotlinx.android.synthetic.main.fragment_about.*
+import kotlinx.android.synthetic.main.layout_footer.*
 
 
 class AboutFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-
-        buttonCall.setOnClickListener {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        buttonCall?.setOnClickListener {
             Toast.makeText(activity, "Placing call ...", Toast.LENGTH_SHORT).show()
         }
 
-        buttonSendMessage.setOnClickListener {
+        buttonSendMessage?.setOnClickListener {
             Toast.makeText(activity, "Sending message ...", Toast.LENGTH_SHORT).show()
         }
-
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

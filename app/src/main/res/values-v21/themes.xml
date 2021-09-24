@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FullScreen" parent="@style/Theme.AroundAfrica">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="backgroundColor">@color/color_primary</item>
+        <item name="android:background">@color/color_primary</item>
+        <item name="android:statusBarColor">@color/color_primary</item>
+        <item name="android:windowBackground">@color/color_primary</item>
+        <item name="android:navigationBarColor">@color/color_primary</item>
+    </style>
+</resources>

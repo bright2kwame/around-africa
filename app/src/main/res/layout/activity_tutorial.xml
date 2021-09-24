@@ -4,52 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TutorialActivity">
-
-    <TextView
-        android:id="@+id/tutorial_screen_message"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        android:gravity="center"
-        android:text="@string/app_name"
-        android:textAllCaps="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/white"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/tutorialPager"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        app:layout_constraintBottom_toTopOf="@+id/circleIndicator"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tutorial_screen_message" />
-
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/circleIndicator"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/pager_indicator_height"
-        android:layout_margin="@dimen/margin_small"
-        android:paddingStart="@dimen/activity_horizontal_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingEnd="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        app:layout_constraintBottom_toTopOf="@+id/buttonSignIn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:tabBackground="@drawable/tab_selector"
-        app:tabGravity="center"
-        app:tabIndicatorHeight="0dp"
-        app:tabMaxWidth="10dp" />
+    tools:context=".TutorialActivity"
+    tools:ignore="MissingClass">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonSignIn"
@@ -64,4 +20,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/tutorialPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:id="@+id/layoutOnboardingIndicators"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSignIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+

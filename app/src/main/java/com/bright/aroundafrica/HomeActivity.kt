@@ -2,12 +2,14 @@ package com.bright.aroundafrica
 
 
 import android.os.Bundle
+import android.preference.PreferenceManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.bright.aroundafrica.fragment.AboutFragment
 import com.bright.aroundafrica.fragment.LocalPlacesFragment
 import com.bright.aroundafrica.fragment.QRScannerFragment
+import com.bright.aroundafrica.util.AppConstants
 import kotlinx.android.synthetic.main.activity_home.*
 
 
@@ -19,7 +21,7 @@ class HomeActivity : AppCompatActivity() {
         var fragment: Fragment = LocalPlacesFragment.newInstance()
 
         topAppBar.setNavigationOnClickListener {
-            drawerLayout.openDrawer(GravityCompat.END)
+            drawerLayout.openDrawer(GravityCompat.START)
         }
 
         navigationView.setNavigationItemSelectedListener { menuItem ->
@@ -41,6 +43,8 @@ class HomeActivity : AppCompatActivity() {
         }
 
         replaceFragment(fragment)
+
+        PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean(AppConstants.hasLaunchedPref, true).apply()
     }
 
     private fun replaceFragment(fragment: Fragment) {
