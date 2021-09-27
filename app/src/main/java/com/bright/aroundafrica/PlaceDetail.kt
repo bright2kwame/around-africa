@@ -55,10 +55,12 @@ class PlaceDetail : AppCompatActivity() {
                 .into(imageViewItem)
         }
 
+        val qrUrl = AppConstants.baseQRCodeApi.plus(AppConstants.createQRCode).plus(locationPlace.id)
+        Log.e("URL",qrUrl)
         Picasso.get()
-            .load(AppConstants.baseQRCodeApi.plus(AppConstants.createQRCode).plus(locationPlace.id))
+            .load(qrUrl)
             .resize(200, 200).centerCrop()
-            .into(imageViewItem)
+            .into(imageViewItemQR)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
